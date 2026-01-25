@@ -1,65 +1,88 @@
-import Image from "next/image";
+'use client';
+
+import { useState } from 'react';
+import mealsData from '../data/meals.json';
+
+type WeekPlan = {
+  week: string;
+  monday_big_pot_1: string[];
+  monday_big_pot_2: string[];
+  thursday: string[];
+};
 
 export default function Home() {
+  const { calendar, all_dishes } = mealsData;
+  const [selectedWeek, setSelectedWeek] = useState<WeekPlan | null>(null);
+
+  // --- NEW LOGIC START ---
+  // This helper function creates our "Pivot Table"
+  const getConsolidatedIngredients = (week: WeekPlan) => {
+    const allIngredients = [
+      ...week.monday_big_pot_1, 
+      ...week.monday_big_pot_2, 
+      ...week.thursday
+    ].flatMap(dishName => all_dishes[dishName as keyof typeof all_dishes]?.ingredients || []);
+
+    // Set() is a special JavaScript tool that automatically removes duplicates
+    return Array.from(new Set(allIngredients));
+  };
+  // --- NEW LOGIC END ---
+
+  const shoppingList = selectedWeek ? getConsolidatedIngredients(selectedWeek) : [];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main style={{ padding: '20px', fontFamily: 'sans-serif', maxWidth: '800px', margin: '0 auto' }}>
+      <h1 style={{ color: '#f97316' }}>My Meal Prep Plan</h1>
+      
+      {/* 1. Week Selector */}
+      <div style={{ display: 'flex', gap: '10px', marginBottom: '20px', flexWrap: 'wrap' }}>
+        {calendar.map((wk, idx) => (
+          <button 
+            key={idx} 
+            onClick={() => setSelectedWeek(wk)}
+            style={{ 
+              padding: '10px 15px', 
+              borderRadius: '8px', 
+              cursor: 'pointer', 
+              border: '2px solid #f97316',
+              backgroundColor: selectedWeek?.week === wk.week ? '#f97316' : 'white',
+              color: selectedWeek?.week === wk.week ? 'white' : '#f97316',
+              fontWeight: 'bold'
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            {wk.week}
+          </button>
+        ))}
+      </div>
+
+      {selectedWeek && (
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+          <div>
+            <h3>📅 Prep Schedule</h3>
+            <p><strong>Monday (Big Pots):</strong></p>
+            <ul>
+              {selectedWeek.monday_big_pot_1.map((dish, i) => <li key={i}>{dish}</li>)}
+              {selectedWeek.monday_big_pot_2.map((dish, i) => <li key={i + 100}>{dish}</li>)}
+            </ul>
+            <p><strong>Thursday:</strong></p>
+            <ul>
+              {selectedWeek.thursday.map((dish, i) => <li key={i}>{dish}</li>)}
+            </ul>
+          </div>
+
+          <div style={{ backgroundColor: '#fff7ed', padding: '15px', borderRadius: '12px', border: '2px solid #f97316' }}>
+            <h3>🛒 Master Shopping List</h3>
+            <ul style={{ listStyleType: 'none', padding: 0 }}>
+              {shoppingList.map((ing, i) => (
+                <li key={i} style={{ marginBottom: '8px', borderBottom: '1px solid #fee2e2', paddingBottom: '4px' }}>
+                  <input type="checkbox" style={{ marginRight: '10px' }} /> 
+                  {ing}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </main>
-    </div>
+      )}
+    </main>
   );
 }

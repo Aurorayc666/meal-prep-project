@@ -1,0 +1,243 @@
+{
+    "all_dishes": {
+        "宫保鸡丁": {
+            "name": "宫保鸡丁",
+            "ingredients": [
+                "鸡腿肉",
+                "干辣椒",
+                "花生",
+                "葱"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/宫保鸡丁.jpg"
+        },
+        "西葫芦炒鸡蛋": {
+            "name": "西葫芦炒鸡蛋",
+            "ingredients": [
+                "西葫芦",
+                "鸡蛋"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/西葫芦炒鸡蛋.jpg"
+        },
+        "蒜蓉生菜": {
+            "name": "蒜蓉生菜",
+            "ingredients": [
+                "生菜",
+                "蒜"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/蒜蓉生菜.jpg"
+        },
+        "番茄牛腩": {
+            "name": "番茄牛腩",
+            "ingredients": [
+                "牛腩",
+                "番茄",
+                "洋葱",
+                "姜",
+                "蒜"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/番茄牛腩.jpg"
+        },
+        "清炒上海青": {
+            "name": "清炒上海青",
+            "ingredients": [
+                "上海青",
+                "蒜"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/清炒上海青.jpg"
+        },
+        "牛肉炒芹菜": {
+            "name": "牛肉炒芹菜",
+            "ingredients": [
+                "牛肉",
+                "芹菜",
+                "蒜"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/牛肉炒芹菜.jpg"
+        },
+        "番茄炒鸡蛋": {
+            "name": "番茄炒鸡蛋",
+            "ingredients": [
+                "番茄",
+                "鸡蛋"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/番茄炒鸡蛋.jpg"
+        },
+        "凉拌黄瓜": {
+            "name": "凉拌黄瓜",
+            "ingredients": [
+                "黄瓜",
+                "蒜"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/凉拌黄瓜.jpg"
+        },
+        "大盘鸡": {
+            "name": "大盘鸡",
+            "ingredients": [
+                "鸡腿肉",
+                "土豆",
+                "青椒",
+                "干辣椒",
+                "姜",
+                "蒜"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/大盘鸡.jpg"
+        },
+        "蒜蓉西兰花": {
+            "name": "蒜蓉西兰花",
+            "ingredients": [
+                "西兰花",
+                "蒜"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/蒜蓉西兰花.jpg"
+        },
+        "黑椒牛柳": {
+            "name": "黑椒牛柳",
+            "ingredients": [
+                "牛肉",
+                "洋葱",
+                "黑胡椒"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/黑椒牛柳.jpg"
+        },
+        "清炒油麦菜": {
+            "name": "清炒油麦菜",
+            "ingredients": [
+                "油麦菜",
+                "蒜"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/清炒油麦菜.jpg"
+        },
+        "萝卜牛肉汤": {
+            "name": "萝卜牛肉汤",
+            "ingredients": [
+                "牛肉",
+                "白萝卜",
+                "姜"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/萝卜牛肉汤.jpg"
+        },
+        "香煎豆腐": {
+            "name": "香煎豆腐",
+            "ingredients": [
+                "豆腐"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/香煎豆腐.jpg"
+        },
+        "香煎鸡腿": {
+            "name": "香煎鸡腿",
+            "ingredients": [
+                "鸡腿"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/香煎鸡腿.jpg"
+        },
+        "蒜炒四季豆": {
+            "name": "蒜炒四季豆",
+            "ingredients": [
+                "四季豆",
+                "蒜"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/蒜炒四季豆.jpg"
+        },
+        "青椒土豆丝": {
+            "name": "青椒土豆丝",
+            "ingredients": [
+                "土豆",
+                "青椒"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/青椒土豆丝.jpg"
+        },
+        "红烧排骨": {
+            "name": "红烧排骨",
+            "ingredients": [
+                "排骨",
+                "姜"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/红烧排骨.jpg"
+        },
+        "清炒菠菜": {
+            "name": "清炒菠菜",
+            "ingredients": [
+                "菠菜",
+                "蒜"
+            ],
+            "recipe_steps": "Standard meal prep steps: 1. Clean ingredients. 2. Prep containers.",
+            "image": "/images/清炒菠菜.jpg"
+        }
+    },
+    "calendar": [
+        {
+            "week": "第1周",
+            "monday_big_pot_1": [
+                "番茄牛腩"
+            ],
+            "monday_big_pot_2": [
+                "清炒上海青"
+            ],
+            "thursday": [
+                "宫保鸡丁",
+                "西葫芦炒鸡蛋",
+                "蒜蓉生菜"
+            ]
+        },
+        {
+            "week": "第2周",
+            "monday_big_pot_1": [
+                "大盘鸡"
+            ],
+            "monday_big_pot_2": [
+                "蒜蓉西兰花"
+            ],
+            "thursday": [
+                "牛肉炒芹菜",
+                "番茄炒鸡蛋",
+                "凉拌黄瓜"
+            ]
+        },
+        {
+            "week": "第3周",
+            "monday_big_pot_1": [
+                "萝卜牛肉汤"
+            ],
+            "monday_big_pot_2": [
+                "香煎豆腐"
+            ],
+            "thursday": [
+                "黑椒牛柳",
+                "西葫芦炒鸡蛋",
+                "清炒油麦菜"
+            ]
+        },
+        {
+            "week": "第4周",
+            "monday_big_pot_1": [
+                "红烧排骨"
+            ],
+            "monday_big_pot_2": [
+                "清炒菠菜"
+            ],
+            "thursday": [
+                "香煎鸡腿",
+                "蒜炒四季豆",
+                "青椒土豆丝"
+            ]
+        }
+    ]
+}

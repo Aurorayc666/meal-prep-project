@@ -44,3 +44,13 @@ We have successfully moved from raw data files (CSV/Word) to a functional React 
 - **Language**: TypeScript
 - **Styling**: Inline CSS (Rapid Prototyping)
 - **Data**: JSON / CSV
+
+
+## 📅 Next Session
+Start Here:
+
+Visuals: We need to link the image paths in all_dishes to actual files in the public/images folder.
+
+Componentization: The page.tsx is getting a bit long. Let's move the "Shopping List" into its own separate file (Component) to keep things tidy.
+
+Recipe Details: Add a "See Recipe" button that shows the recipe_steps from the JSON.
